@@ -141,7 +141,7 @@ All models were fine-tuned from COCO-pretrained weights for 100 epochs at 640 ×
 | YOLOv8n-seg            | 0.802     | 0.798     | 0.811     | 0.784              | 0.762               |
 | YOLOv8s-seg            | 0.816     | 0.809     | 0.824     | 0.801              | 0.778               |
 | YOLOv8m-seg            | 0.839     | 0.827     | 0.846     | 0.823              | 0.801               |
-| **YOLOv8l-seg (best)** | **0.852** | **0.841** | **0.858** | **0.846**          | **0.829**           |
+| **YOLOv8l-seg**        | **0.852** | **0.841** | **0.858** | **0.846**          | **0.829**           |
 
 YOLOv8x-seg offered only marginal accuracy gains over YOLOv8l-seg at significantly higher computational cost.
 
