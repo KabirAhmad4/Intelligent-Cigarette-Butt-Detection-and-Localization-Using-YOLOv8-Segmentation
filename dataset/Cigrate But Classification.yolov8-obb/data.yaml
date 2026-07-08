@@ -4,4 +4,4 @@ test: test/images
 
 names: 
   0: cig_butt
-  0: non_cig_butt
+  1: non_cig_butt
