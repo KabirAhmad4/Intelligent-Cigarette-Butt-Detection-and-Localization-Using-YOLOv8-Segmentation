@@ -21,6 +21,7 @@ The dataset is designed for **tiny-object litter detection** research and suppor
 | Annotation type                      | YOLOv8 Oriented Bounding Box (OBB)        |
 | Annotation tool                      | Roboflow (manual annotation, 1 annotator) |
 | Image format                         | PNG (RGB)                                 |
+| Annotation format                    | .yaml                                     |
 | Original image resolution            | 96 DPI *(1080 pixel)*                     |
 | Training input size                  | 640 × 640                                 |
 | Objects per image                    | min 1 · avg ≈ 5 · max 9                   |
