@@ -114,7 +114,7 @@ from ultralytics import YOLO
 model = YOLO("yolov8l-obb.pt")   # or yolov8n/s/m/x variant
 
 model.train(
-    data="CigWasteNet/data.yaml",
+    data="dataset/CigWasteNet.yolov8-obb/data.yaml",
     epochs=100,
     imgsz=640,
     batch=6,
