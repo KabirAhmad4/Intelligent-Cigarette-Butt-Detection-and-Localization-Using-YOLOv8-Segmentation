@@ -124,7 +124,7 @@ model.train(
 ### 4. Validate / Predict
 
 ```python
-metrics = model.val(data="CigWasteNet/data.yaml")
+metrics = model.val(data="dataset/CigWasteNet.yolov8-obb/data.yaml")
 
 results = model.predict("path/to/campus_image.png", conf=0.25)
 results[0].show()
