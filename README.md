@@ -1,12 +1,14 @@
 # Intelligent-Cigarette-Butt-Detection-and-Localization-Using-YOLOv8-Segmentation
+
 YOLOv8-based dataset and code for detecting and localizing cigarette butts on university campuses. Includes 2,000 annotated images (OBB format), training scripts, and benchmark results for YOLOv8n/s/m/l segmentation models
-A custom dataset of cigarette butt images collected across a university campus, created for the paper:
+
+A custom dataset of cigarette butt images collected across a university/college campus, created for the paper:
 
 > **Intelligent Cigarette Butt Detection and Localization in University Campuses Using YOLOv8 Segmentation**
 > *Author(s), IEEE Access, 2026 (under review).*
 > DOI: *to be added upon publication*
 
-The dataset is designed for **tiny-object litter detection** research and supports training and benchmarking of YOLOv8 models for automated cigarette butt monitoring, targeted campus clean-up planning, and evaluation of smoke-free policies.
+**CigWasteNet** is designed for **tiny-object litter detection** research and supports training and benchmarking of YOLOv8 models for automated cigarette butt monitoring, targeted campus clean-up planning, and evaluation of smoke-free policies.
 
 ---
 
@@ -14,6 +16,7 @@ The dataset is designed for **tiny-object litter detection** research and suppor
 
 | Property                             | Value                                     |
 | ------------------------------------ | ----------------------------------------- |
+| Dataset name                         | CigWasteNet                               |
 | Original images collected            | 1,500                                     |
 | Total images (after Roboflow export) | 2,000                                     |
 | Annotated images                     | 2,000                                     |
@@ -63,7 +66,7 @@ Blurry or extremely small butts, unusual camera angles, visually similar backgro
 The dataset is distributed as a ZIP archive exported from Roboflow in **YOLOv8 Oriented Bounding Box** format:
 
 ```
-UCBD.zip
+CigWasteNet.zip
 ├── data.yaml            # class names, paths, and dataset configuration
 ├── README.md            # this file
 ├── train/
@@ -100,7 +103,7 @@ pip install ultralytics
 ### 2. Unzip the dataset
 
 ```bash
-unzip UCBD.zip -d UCBD
+unzip CigWasteNet.zip -d CigWasteNet
 ```
 
 ### 3. Train a YOLOv8 model
@@ -111,7 +114,7 @@ from ultralytics import YOLO
 model = YOLO("yolov8l-obb.pt")   # or yolov8n/s/m/x variant
 
 model.train(
-    data="UCBD/data.yaml",
+    data="CigWasteNet/data.yaml",
     epochs=100,
     imgsz=640,
     batch=6,
@@ -121,7 +124,7 @@ model.train(
 ### 4. Validate / Predict
 
 ```python
-metrics = model.val(data="UCBD/data.yaml")
+metrics = model.val(data="CigWasteNet/data.yaml")
 
 results = model.predict("path/to/campus_image.png", conf=0.25)
 results[0].show()
@@ -146,24 +149,23 @@ YOLOv8x-seg offered only marginal accuracy gains over YOLOv8l-seg at significant
 
 ## 📄 License
 
-This dataset is released under the **MIT License**. See the [`LICENSE`](LICENSE) file for full terms.
+This dataset is released under the **MIT License**, copyright © 2026 **ICARL**. See the [`LICENSE`](LICENSE) file for full terms.
 
 ## 🙏 Citation
 
 If you use this dataset in your research, please cite:
 
 ```bibtex
-@article{ucbd2026,
+@article{cigwastenet2026,
   title   = {Intelligent Cigarette Butt Detection and Localization in
              University Campuses Using YOLOv8 Segmentation},
   author  = { Eng.Muhammad Kabir Ahmad , Prof.Dr.Usman Ghani Khan and Prof.Muhammad Waseem},
   journal = {IEEE Access},
   year    = {2026},
-  note    = {Dataset: University Cigarette Butt Dataset (UCBD)}
+  note    = {Dataset: CigWasteNet}
 }
 ```
 
 ## 📬 Contact
 
 For questions about the dataset, please open an issue in this repository or contact the corresponding author.
-
